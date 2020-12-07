@@ -11,3 +11,6 @@ http://projet.eu.org/pedago/sin/term/5-huffman.pdf
 
 # AIDE
 https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/16421-lire-et-ecrire-dans-des-fichiers
+
+## Fread
+https://docs.microsoft.com/fr-fr/cpp/c-runtime-library/reference/fread?view=msvc-160

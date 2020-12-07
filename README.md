@@ -8,3 +8,6 @@ https://sylvain-tisserant.pedaweb.univ-amu.fr/Prog_Imp_C/TD_TP/Module_gestion_fi
 
 # EXEMPLE
 http://projet.eu.org/pedago/sin/term/5-huffman.pdf
+
+# AIDE
+https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/16421-lire-et-ecrire-dans-des-fichiers

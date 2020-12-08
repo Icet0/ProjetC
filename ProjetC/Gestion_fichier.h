@@ -11,4 +11,11 @@ typedef struct {
 	int nb_octets; // nombre d'octets lus ou écrits
 } Bin_file;
 
+Bin_file* open_bin_file(char*, char);
+void write_bin_file(Bin_file*, char);
+char read_bin_file(Bin_file*);
+int close_bin_file(Bin_file*);
+
+
+
 void TEST_GESTION_FICHIER();

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+
 #include "arbre_binaire.h"
 
 // Type abstrait de données
@@ -14,6 +15,7 @@ arbre creer_arbre(Elt e, arbre fg, arbre fd)
 {
     arbre tmp = ((arbre)malloc(sizeof(noeud)));
     tmp->elt = e;
+    tmp->frequence = 1;
     tmp->fils_droit = fd;
     tmp->fils_gauche = fg;
     return tmp;
@@ -59,7 +61,7 @@ void print_arbre_aux(arbre a)
         printf(".");
     else
     {
-        printf("%d (", a->elt);
+        printf("%c%d (", a->elt,a->frequence);
         print_arbre_aux(a->fils_gauche);
         printf(") (");
         print_arbre_aux(a->fils_droit);

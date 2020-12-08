@@ -2,11 +2,12 @@
 #ifndef __ARBRE_BINAIRE__
 #define __ARBRE_BINAIRE__
 
-typedef int Elt;
+typedef char Elt;
 //typedef int bool;
 
 struct znoeud {
 	Elt elt;
+	int frequence;
 	struct znoeud* fils_gauche;
 	struct znoeud* fils_droit;
 };

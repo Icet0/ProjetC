@@ -24,12 +24,18 @@
     <ClCompile Include="Gestion_fichier.cpp">
       <Filter>Fichiers de ressources</Filter>
     </ClCompile>
+    <ClCompile Include="Tests.cpp">
+      <Filter>Fichiers de ressources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbre_binaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Gestion_fichier.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

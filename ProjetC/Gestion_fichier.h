@@ -10,3 +10,5 @@ typedef struct {
 	int i_octet; // indice dans octet
 	int nb_octets; // nombre d'octets lus ou écrits
 } Bin_file;
+
+void TEST_GESTION_FICHIER();

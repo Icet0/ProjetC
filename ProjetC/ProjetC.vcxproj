@@ -141,12 +141,17 @@
   <ItemGroup>
     <ClCompile Include="Arbre_binaire.cpp" />
     <ClCompile Include="Gestion_fichier.cpp" />
+    <ClCompile Include="Huffman.cpp" />
+    <ClCompile Include="Liste.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbre_binaire.h" />
     <ClInclude Include="Gestion_fichier.h" />
+    <ClInclude Include="Huffman.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Liste.h" />
     <ClInclude Include="Tests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

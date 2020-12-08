@@ -1,5 +1,9 @@
-#ifndef LIST_H
-#define LIST_H
+#pragma once
+#ifndef __LIST_H__
+#include "Item.h"
+#include "Arbre_binaire.h"
+#define __LIST_H__
+
 
 
 typedef struct {
@@ -12,6 +16,7 @@ typedef struct {
 
 Item* nodeAlloc();
 void freeItem(Item* node);
+list_t* newList();
 void initList(list_t* list_p);
 int listCount(list_t* list);
 Item* onList(list_t* list, char caract);// return an item with same board , or null
@@ -22,6 +27,6 @@ void addFirst(list_t* list, Item* node); // add item in top
 void addLast(list_t* list, Item* node); // add item in queue
 void delList(list_t* list, Item* node); // remove a node from list
 void cleanupList(list_t* list); // empty list and free items
-
+void printList(list_t list);
 
 #endif

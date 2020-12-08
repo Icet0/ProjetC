@@ -1,11 +1,10 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
 
 #include "Liste.h"
-#include "Item.h"
-#include "Arbre_binaire.h"
 #define MAX_BOARD 36
 /* Item Functions */
 
@@ -15,10 +14,10 @@ Item* nodeAlloc()
 
 	node = (Item*)malloc(sizeof(Item));
 	assert(node);
-
+	node->arbre = NULL;
 	node->prev = NULL;
 	node->next = NULL;
-	node->f = 0;
+	//node->f = 0;
 
 	return node;
 }
@@ -28,10 +27,17 @@ void freeItem(Item* node)
 	if (node) free(node);
 }
 
+list_t* newList() {
+	list_t* list;
+	list = (list_t*)malloc(sizeof(list_t));
+	assert(list);
+	initList(list);
+	return list;
+}
 
 void initList(list_t* list_p)
 {
-	//if (list_p == NULL) list_p = malloc(sizeof(list_t));
+	//if (list_p == NULL) list_p = (list_t*)malloc(sizeof(list_t));
 	assert(list_p);
 
 	list_p->numElements = 0;
@@ -44,18 +50,20 @@ int listCount(list_t* list)
 	return list->numElements;
 }
 
-// return an item with corresponding board , or null
+// return an item with corresponding char in arbre , or null
 Item* onList(list_t* list, char caract)
-{
-	Item* item = list->first;
-	int i;
-	while (item != NULL) {
-		i = 0;
-		if (item->arbre->elt == caract) {
-			return item;
+{	
+	if (list != NULL) {
+		Item* item = list->first;
+		int i;
+		while (item != NULL) {
+			i = 0;
+			if (item->arbre->elt == caract) {
+				return item;
+			}
+
+			item = item->next;
 		}
-		
-		item = item->next;
 	}
 	return NULL;
 }
@@ -137,7 +145,7 @@ void delList(list_t* list, Item* node) {//made by me
 Item* popBest(list_t* list) // and remove the best board from the list.
 {
 	if (list != NULL) {
-		float best_f = list->first->f;
+		float best_f = list->first->arbre->frequence;
 		Item* resultat = list->first;
 		Item* tmp = list->first->next;
 		while (tmp != NULL)
@@ -151,8 +159,13 @@ Item* popBest(list_t* list) // and remove the best board from the list.
 		Item* prec = resultat->prev;
 		Item* suiv = resultat->next;
 		//on raccorde la liste
-		prec->next = suiv;
+		if(prec!=NULL)prec->next = suiv;
 		if (suiv != NULL)suiv->prev = prec;
+		//ne pas oublier les cas du premier ou dernier elem
+		if (list->first == resultat)list->first = suiv;
+		if (list->last == resultat)list->last = prec;
+		resultat->prev = NULL;
+		resultat->prev = NULL;
 		list->numElements--;
 		return (resultat);
 	}
@@ -218,8 +231,13 @@ void cleanupList(list_t* list)
 void printList(list_t list) {
 	Item* item = list.first;
 	while (item) {
-		printf("%d pour le char : %c", item->arbre->frequence, item->arbre->elt);
+		if (item->arbre->elt == '\0'){
+			printf("\n\t\t%d pour le char : %c (caractere de fin)", item->arbre->frequence, item->arbre->elt);
+		}
+		else {
+			printf("\n\t\t%d pour le char : %c", item->arbre->frequence, item->arbre->elt);
+		}
 		item = item->next;
 	}
-	printf(" (nb_items: %d)\n", list.numElements);
+	printf("\n\t\t(nb_items: %d)\n", list.numElements);
 }

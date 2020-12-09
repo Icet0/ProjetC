@@ -15,6 +15,10 @@ arbre creer_arbre(Elt e, arbre fg, arbre fd)
 {
     arbre tmp = ((arbre)malloc(sizeof(noeud)));
     tmp->elt = e;
+
+    tmp->code = ((char*)malloc(sizeof(char)*255));
+    tmp->code = (char*)"";
+
     tmp->frequence = 1;
     tmp->fils_droit = fd;
     tmp->fils_gauche = fg;

@@ -5,25 +5,47 @@
 
 #include "Huffman.h"
 
-
-void serialisation(arbre a, char* s, int i)
-{
-    if (est_arbre_vide(a))
-    {
-        s[i] = '0';
-        (i)++;
+//
+//void serialisation(arbre a, char* s, int i)
+//{
+//    if (est_arbre_vide(a))
+//    {
+//        s[i] = '0';
+//        (i)++;
+//    }
+//    else
+//    {
+//        s[i] = '1';
+//        (i)++;
+//        s[i] = a->elt;
+//        (i)++;
+//        serialisation(a->fils_gauche, s, i);
+//        serialisation(a->fils_droit, s, i);
+//    }
+//    s[i] = '\0';
+//}
+char* serialisation(arbre a, char* s) {
+    if (est_arbre_vide(a)) {
+        char tmp[] = "0";
+        strcat(s, tmp);
     }
     else
     {
-        s[i] = '1';
-        (i)++;
-        s[i] = a->elt;
-        (i)++;
-        serialisation(a->fils_gauche, s, i);
-        serialisation(a->fils_droit, s, i);
+        char res[3] = "";
+        char elem1[2] = "";
+        char elem = a->elt;
+        elem1[0] = elem;
+        char tmp[] = "1";
+        strcat(res, tmp);
+        strcat(res, elem1);
+        strcat(s, res);
+        serialisation(a->fils_gauche, s);
+        serialisation(a->fils_droit, s);
+
     }
-    s[i] = '\0';
+    return s;
 }
+
 
 arbre deserialisation(char* s, int i)
 {
@@ -122,6 +144,60 @@ arbre creer_Arbre_char(list_t* list) {
     ////fonction rechercher noeud qui pour un un caractère donné renvoie le noeud correspondant
 
 
+
+//char* str_append(char* str, char* other) //code + '1' ajouter un string en fin
+//{
+//    char* result = (char *)malloc(sizeof(char) * (strlen(str) + strlen(other)));
+//    strcat(str, other);
+//    //strcat(result, other);
+//
+//    //free(str);
+//    //free(other);
+//
+//    return str;
+//}
+
+void table_encodage(arbre arbre)
+{
+    char code[255] = {};
+
+    walk(arbre, code);
+    
+    printf("fin table encodage");
+}
+
+void walk(arbre arbre, char code[]) //parcours l'arbre
+{
+    if (arbre->fils_droit == NULL && arbre->fils_gauche == NULL)
+    {
+        char tmp[255] = {};
+        strcpy(tmp, code);
+
+
+        arbre->code = tmp;
+    
+    }
+    else
+    {
+        if (arbre->fils_gauche != NULL)
+        {
+            walk(arbre->fils_gauche, strcat(code, (char*)"0"));
+            //spr 1ier
+        }
+
+        if (arbre->fils_droit != NULL)
+        {
+            code[strlen(code) - 1] = '\0';
+            walk(arbre->fils_droit, strcat(code, (char*)"1"));
+            code[strlen(code) - 1] = '\0';
+            //spr 1ier
+        }
+    }
+}
+
+
+
+
 void TEST_HUFFMAN() {
     printf("\tTest calcul_frequence : ");
     const char* s = "abbcccdddd";//1a2b3c4d
@@ -133,6 +209,9 @@ void TEST_HUFFMAN() {
     printf("\tTest creation_arbre : ");
     arbre ar = creer_Arbre_char(list);
     print_arbre(ar);
+
+    table_encodage(ar);
+    //printf("code for arbre : %s", tab['a']);
 }
 
 

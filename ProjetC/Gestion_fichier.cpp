@@ -143,6 +143,8 @@ int fermeture_fichier_bit(Bin_file* fichier) {
 }
 */
 
+
+
 void expand_byte(unsigned char x, char* octet)
 {
 	int i;
@@ -277,15 +279,23 @@ char read_bin_file(Bin_file* input)
 	return bit;
 }
 
+void open_normal_file() {
+
+}
+
 void TEST_GESTION_FICHIER() {
 	printf("\tTest ouverture fichier : ");
-	const char* nom_fichier_1 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
-	const char* nom_fichier_2 = "test2.txt";
-	if (open_bin_file((char*)nom_fichier_1,'w')->file != NULL)printf("_fichier ouvert correctement\n");
+	const char* nom_fichier_1 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.bin";
+	const char* nom_fichier_2 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
+	Bin_file* file1 = open_bin_file((char*)nom_fichier_1, 'w');
+	if ( file1->file != NULL) {
+		printf("_fichier ouvert correctement\n");
+		close_bin_file(file1);
+	}
 	printf("\tTest Guillaume\n");
 	Bin_file* file = open_bin_file((char*)nom_fichier_1, 'w');
 	write_bin_file(file, '1');
-	write_bin_file(file, '0');
+	write_bin_file(file, '1');
 	write_bin_file(file, '0');
 	write_bin_file(file, '0');
 	write_bin_file(file, '0');
@@ -302,5 +312,14 @@ void TEST_GESTION_FICHIER() {
 		char test = read_bin_file(file2);
 		printf("%c\n", test);
 	}
+	close_bin_file(file);
+	printf("\tTest Ouverture .txt");
+	Bin_file* file3 = open_bin_file((char*)nom_fichier_2, 'r');
+	for (int i = 0; i <= 18; i++)
+	{
+		char test = read_bin_file(file3);
+		printf("%c\n", test);
+	}
+	close_bin_file(file3);
 
 }

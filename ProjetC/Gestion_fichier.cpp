@@ -200,12 +200,13 @@ char* lecture_normal_file(Bin_file* input) {
 	while (liste->first != NULL)  
 	{
 		result[i] = popFirst(liste)->arbre->elt;
-		printf("\nresultat[%d] : %c\n", i, result[i]);
+		//printf("\nresultat[%d] : %c\n", i, result[i]);
 		i++ ;
 	}
 	result[i] = '\0';
 	return result;	
 }
+
 
 
 
@@ -223,7 +224,7 @@ void TEST_GESTION_FICHIER() {
 	write_bin_file(file, '1');
 	write_bin_file(file, '1');
 	write_bin_file(file, '0');
-	write_bin_file(file, '0');
+	write_bin_file(file, '1');
 	write_bin_file(file, '0');
 	write_bin_file(file, '0');
 	write_bin_file(file, '0');

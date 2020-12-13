@@ -9,5 +9,5 @@
 
 void main() {
 	function_test_all();
-	printf("Hello World");
+	printf("\n\n\nFIN!\nHello World");
 }

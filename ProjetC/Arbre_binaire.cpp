@@ -96,7 +96,7 @@ void free_arbre(arbre a)
 // FONTIONS RAJOUTEES
 
 void print_noeud(arbre a) {
-    printf("Noeud -> Elt :%d\n", racine(a));
+    printf("Noeud -> Elt :%c\n", racine(a));
 }
 
 

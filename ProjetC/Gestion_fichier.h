@@ -1,4 +1,12 @@
+#ifndef __GESTION_FICHIER_H__
+
+#include "Arbre_binaire.h"
+#include "liste.h"
+#define __GESTION_FICHIER_H__
+
+
 #define BLOCK_SIZE 4096 // 1 bloc sur disque = 4096 octets
+
 
 typedef struct {
 	FILE* file; // identification du fichier
@@ -16,6 +24,11 @@ void write_bin_file(Bin_file*, char);
 char read_bin_file(Bin_file*);
 int close_bin_file(Bin_file*);
 
-
+Bin_file* open_normal_file(char* filename, char mode);
+char* lecture_normal_file(Bin_file* input);
+void close_normal_file(Bin_file* fichier);
 
 void TEST_GESTION_FICHIER();
+
+
+#endif

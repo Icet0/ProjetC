@@ -8,6 +8,7 @@ typedef char Elt;
 struct znoeud {
 	Elt elt;
 	int frequence;
+	char* code;
 	struct znoeud* fils_gauche;
 	struct znoeud* fils_droit;
 };

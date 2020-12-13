@@ -22,10 +22,13 @@ Item* nodeAlloc()
 	return node;
 }
 
+
 void freeItem(Item* node)
 {
 	if (node) free(node);
 }
+
+
 
 list_t* newList() {
 	list_t* list;
@@ -89,6 +92,8 @@ Item* popFirst(list_t* list) //made by me
 	}
 	return NULL;
 }
+
+
 
 // return and remove last item
 Item* popLast(list_t* list) //made by me

@@ -244,6 +244,8 @@ void TEST_GESTION_FICHIER() {
 	Bin_file* file3 = open_normal_file((char*)nom_fichier_2, 'r');
 	lecture_normal_file(file3);
 	close_normal_file(file3);
+	close_bin_file(file2);
+
 	printf("\nfin test ouverture .txt\n");
 
 }

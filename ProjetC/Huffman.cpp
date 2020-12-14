@@ -239,6 +239,17 @@ void codage_caract(char caract, arbre arbre, Bin_file* output) {
 	}
 }
 
+void codage(arbre arbre, Bin_file* output, char* contenu) {
+	if (!est_arbre_vide(arbre) && output != NULL && contenu != NULL) {
+		for (int i = 0; i < strlen(contenu); i++)
+		{
+			codage_caract(contenu[i], arbre, output);
+		}
+	}
+	printf("bits codés : %d", output->nb_octets);
+	// p e rajouter ici le rajout des bits
+}
+
 
 //décodage codebinaire to string
 void décodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input) {//output = fichier de destination
@@ -292,27 +303,30 @@ int rechercher_bits(char* bits, arbre arbre) {
 		return boole;
 	}
 }
+*/
+
 //On appelle les différentes fonctyions de la compression
-void compression(char* nameInput, Bin_file* output) {
-	FILE* inpt;
-	int i;
-	int j;
-	const char* s;
-	char* code;
-	char c;
-	inpt = fopen(nameInput, "r");
-	list_t* list = newList();
-	while (fscanf(inpt, "%d", &i) != EOF) {
-		list = calcul_freq_char((char*)s);
-	}
-	arbre ar = creer_Arbre_char(list);
-	j = serialisation(ar, code, c, j, output);
-	codage_caract((char)s, ar, output);
-	fclose(inpt);
+void compression(char* nameInput, char* nameOutput) {
+	Bin_file* file = open_normal_file(nameInput, 'r');
+
+	/*list_t* list = newList();
+	list = calcul_freq_char(lecture_normal_file(file));*/
+
+	//On a essayer de tt rassembler sur la ligne suivante
+	arbre ar = creer_Arbre_char(calcul_freq_char(lecture_normal_file(file)));
+	table_encodage(ar);
+	Bin_file* file_bin = open_bin_file(nameOutput, 'w');
+
+	//ecrire_code(ar);     // A FAIRE
+	codage(ar, file_bin, lecture_normal_file(file));
+	//rajouter_bits()      // A FAIRE
+	close_bin_file(file_bin);
+	close_bin_file(file);
+	//free_arbre(ar);      // A decommenter une fois que l'on passe l'arbre dans le header du fichier compressé
 }
 
 
-*/
+
 
 
 
@@ -395,6 +409,10 @@ void TEST_HUFFMAN() {
 	décodage(ar,ar, file4, file2);
 	close_normal_file(file);
 	close_bin_file(file2);
+
+	getchar();
+	system("cls");
+	compression((char*)nom_fichier_3, (char*)nom_fichier_1);
 }
 
 

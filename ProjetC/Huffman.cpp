@@ -8,25 +8,6 @@
 
 
 
-arbre deserialisation(char* s, int* i)
-{
-    if (s[*i] == '0') {
-        return creer_arbre_vide();
-    }
-    else {
-        if (s[*i] == '1') {
-            (*i)++;
-        }
-        else {
-            arbre gauche = deserialisation(s, i); // Meme principe que le parcours en profondeur, on commence par la gauche
-            arbre droit = deserialisation(s, i);
-            return(creer_arbre(s[*i], gauche, droit));
-
-        }
-    }
-
-}
-
 bool rechercher_Char(list_t* list, char c) {// permet la recherche d'un char dans la liste
     if (onList(list,c) != NULL) {
         return true;
@@ -84,31 +65,6 @@ arbre creer_Arbre_char(list_t* list) {
 
 
 
-//int serialisation(arbre arbreb, char* code, char c, int i) {
-//
-//    if (est_arbre_vide(arbreb)) {
-//        /*  */
-//        return i;
-//    }
-//    else {
-//        char tmp1[100] = {};
-//        char tmp2[100] = {};
-//       /* char* tmp2 = (char*)malloc(100);*/
-//        code[i] = c;
-//        strcpy(tmp1, code);
-//        strcpy(tmp2, code);
-//        i++;
-//        arbreb->code = code;
-//        arbreb->code[i] = '\0';
-//        printf("Code de %c : %s\n", arbreb->elt, arbreb->code);
-//        serialisation(fils_gauche(arbreb), tmp1, '0', i);
-//        serialisation(fils_droit(arbreb), tmp2, '1', i);
-//
-//    }
-//    return i;
-//
-//}
-
 
 void table_encodage(arbre arbre)
 {
@@ -144,8 +100,14 @@ int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, cha
 		strcpy(tmp2, code);
 		i++;
 		char* tmp4 = (char*)malloc(sizeof(char) * strlen(code));
+		char* tmp5 = (char*)malloc(sizeof(char) * strlen(code)-1);//code final
 		strcpy(tmp4, code);
-		arbreb->code = tmp4;
+		//On enlève le premier 0
+		for (int k = 0; k < strlen(tmp4); k++)
+		{
+			tmp5[k] = tmp4[k+1];
+		}
+		arbreb->code = tmp5;//MARCHE, on enlève bien le 0
 		arbreb->code[i] = '\0';
 		//fprintf(output->file, "Code de %c :", arbreb->elt);
 		if (est_feuille(arbreb)) {
@@ -167,8 +129,8 @@ int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, cha
 			for (j; j < i; j = j + 1)
 			{
 				//write_bin_file(output, arbreb->code[j]);
-				printf("%c", arbreb->code[j]);
-				tmp3[j+indice] = arbreb->code[j];
+				printf("%c", arbreb->code[j-1]);
+				tmp3[j+indice] = arbreb->code[j-1];
 				cpt++;
 			}
 			
@@ -221,11 +183,15 @@ void codage_caract(char caract, arbre arbre, Bin_file* output) {
 
 	if (!est_arbre_vide(arbre)) {
 
-		if (arbre->elt == caract) {
-			for (int j = 1; j < strlen(arbre->code); j = j + 1)
+		if (arbre->elt == caract && est_feuille(arbre)) {
+			for (int j = 0; j < strlen(arbre->code); j = j + 1)
 			{
-				//write_bin_file(output, arbre->code[j]);
-				printf("%c",arbre->code[j]);
+				if (output == NULL) {
+					printf("%c", arbre->code[j]);
+				}
+				else {
+					write_bin_file(output, arbre->code[j]);
+				}
 			}
 		}
 		codage_caract(caract, fils_gauche(arbre), output);
@@ -233,27 +199,48 @@ void codage_caract(char caract, arbre arbre, Bin_file* output) {
 	}
 }
 
-/*
-//on passe des bits au caractère
-void décodage_caract(char* bits, arbre arbre, Bin_file* output) {
-
-	if (!est_arbre_vide(arbre)) {
-		int i = 0;
-		char* cod;
-		for (int j = 1; j < strlen(arbre->code); j = j + 1) {
-			cod[i] = arbre->code[j];
-			i = i + 1;
+void codage(arbre arbre, Bin_file* output, char* contenu) {
+	if (!est_arbre_vide(arbre) && output != NULL && contenu != NULL) {
+		for (int i = 0; i < strlen(contenu)+1; i++)
+		{
+			codage_caract(contenu[i], arbre, output);
 		}
-		cod[i] = '\0';
-		if (cod == bits) {
-			fprintf(output->file, "%c", arbre->elt);
-			//printf("%c",arbre->elt);
-		}
+	}
+	printf("\n\nbits codes : %d\n\n", output->nb_octets);
+	// p e rajouter ici le rajout des bits
+}
 
-		décodage_caract(bits, fils_gauche(arbre), output);
-		décodage_caract(bits, fils_droit(arbre), output);
+
+//décodage codebinaire to string
+void decodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input) {//output = fichier de destination
+	if (input != NULL /*&& output != NULL*/) {
+		char bit = read_bin_file(input);
+		if (!est_arbre_vide(arbre) && bit != NULL) {
+			if (est_feuille(arbre)) {
+				//ecrire dans le fichier
+				printf("\nOn ecrit dans le fichier : %c\n", arbre->elt);
+				fputc(arbre->elt, output->file);
+				
+				if (arbre->elt == '\0') {
+					printf("caractere de FIN");
+					return;
+				}
+				arbre = A;//restet de l'arbre
+			}
+			printf("\nRead bin = %c", bit);
+			if (bit == '0') {
+				decodage(A,fils_gauche(arbre), output,input);
+			}
+			if (bit == '1') {
+				decodage(A,fils_droit(arbre), output, input);
+			}
+		}
 	}
 }
+
+
+/*
+
 //recherche si un bit est présent dans le tableau et retourne 1 ou 0
 int rechercher_bits(char* bits, arbre arbre) {
 	int boole = 0;
@@ -276,27 +263,33 @@ int rechercher_bits(char* bits, arbre arbre) {
 		return boole;
 	}
 }
+*/
+
 //On appelle les différentes fonctyions de la compression
-void compression(char* nameInput, Bin_file* output) {
-	FILE* inpt;
-	int i;
-	int j;
-	const char* s;
-	char* code;
-	char c;
-	inpt = fopen(nameInput, "r");
-	list_t* list = newList();
-	while (fscanf(inpt, "%d", &i) != EOF) {
-		list = calcul_freq_char((char*)s);
-	}
-	arbre ar = creer_Arbre_char(list);
-	j = serialisation(ar, code, c, j, output);
-	codage_caract((char)s, ar, output);
-	fclose(inpt);
+void compression(char* nameInput, char* nameOutput) {
+	Bin_file* file = open_normal_file(nameInput, 'r');
+
+	/*list_t* list = newList();
+	list = calcul_freq_char(lecture_normal_file(file));*/
+
+	//On a essayer de tt rassembler sur la ligne suivante
+	arbre ar = creer_Arbre_char(calcul_freq_char(lecture_normal_file(file)));
+	table_encodage(ar);
+	close_normal_file(file);
+	Bin_file* file_bin = open_bin_file(nameOutput, 'w');
+
+	//ecrire_code(ar);     // A FAIRE
+	file = open_normal_file(nameInput, 'r');
+
+	codage(ar, file_bin, lecture_normal_file(file));
+	//rajouter_bits()      // A FAIRE
+	close_bin_file(file_bin);
+	close_normal_file(file);
+	//free_arbre(ar);      // A decommenter une fois que l'on passe l'arbre dans le header du fichier compressé
 }
 
 
-*/
+
 
 
 
@@ -332,7 +325,7 @@ void decompression(char* nameInput, Bin_file* output, arbre ar) {
 
 
 void TEST_HUFFMAN() {
-    printf("\tTest calcul_frequence : ");
+    printf("\n\tTest calcul_frequence : ");
     const char* s = "abbcccdddd";//1a2b3c4d
     list_t* list = newList();
 
@@ -345,15 +338,55 @@ void TEST_HUFFMAN() {
     printf(" _la liste donnee est %s", s);
     printList(*list);
 
-    printf("\tTest creation_arbre : ");
+    printf("\n\tTest creation_arbre : ");
     arbre ar = creer_Arbre_char(list);
     print_arbre(ar);
 
     table_encodage(ar);
-    //printf("code for arbre : %s", tab['a']);
-	//printf("\n\n\ntest compare\n\n\n");
-	//printf("%d", 'A' > '0');
+	printf("\n\tTest codage caract : ");
+	printf("\n\tPour 'a' : ");
+	codage_caract('a', ar, NULL);
+	printf("\n\tPour 'vide' : ");
+	codage_caract('\0', ar, NULL);
+	
+	printf("\n\tTest decodage code Bits : \n");
+	const char* nom_fichier_1 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.bin";
+	const char* nom_fichier_3 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.txt";
+	Bin_file* file = open_bin_file((char*)nom_fichier_1, 'w');
+	//a
+	write_bin_file(file, '1'); write_bin_file(file, '1'); write_bin_file(file, '0');	write_bin_file(file, '1');
+	//b
+	write_bin_file(file, '1'); write_bin_file(file, '1'); write_bin_file(file, '1');
+	//b
+	write_bin_file(file, '1'); write_bin_file(file, '1'); write_bin_file(file, '1');
+	//d
+	write_bin_file(file, '0');
+	//\0
+	write_bin_file(file, '1');	write_bin_file(file, '1'); write_bin_file(file, '0');	write_bin_file(file, '0');
+	//extra byte
+	write_bin_file(file, '0');
+	close_bin_file(file);
 
+	Bin_file* file2 = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
+	Bin_file* file4 = open_normal_file((char*)nom_fichier_3, 'w');
+	decodage(ar,ar, file4, file2);
+	close_normal_file(file);
+	close_bin_file(file2);
+
+	getchar();
+	system("cls");
+
+	const char* nom_fichier_4 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
+
+	compression((char*)nom_fichier_4, (char*)nom_fichier_1);
+	const char* nom_fichier_5 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test3.txt";
+	Bin_file* file_res = open_normal_file((char*)nom_fichier_5, 'w');
+	Bin_file* file_bin = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
+
+	decodage(ar, ar, file_res, file_bin);
+
+	close_bin_file(file_bin);
+	close_normal_file(file_res);
 }
 
 

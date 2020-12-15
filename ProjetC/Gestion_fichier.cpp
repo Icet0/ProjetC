@@ -200,12 +200,13 @@ char* lecture_normal_file(Bin_file* input) {
 	while (liste->first != NULL)  
 	{
 		result[i] = popFirst(liste)->arbre->elt;
-		printf("\nresultat[%d] : %c\n", i, result[i]);
+		//printf("\nresultat[%d] : %c\n", i, result[i]);
 		i++ ;
 	}
 	result[i] = '\0';
 	return result;	
 }
+
 
 
 
@@ -223,7 +224,7 @@ void TEST_GESTION_FICHIER() {
 	write_bin_file(file, '1');
 	write_bin_file(file, '1');
 	write_bin_file(file, '0');
-	write_bin_file(file, '0');
+	write_bin_file(file, '1');
 	write_bin_file(file, '0');
 	write_bin_file(file, '0');
 	write_bin_file(file, '0');
@@ -243,6 +244,8 @@ void TEST_GESTION_FICHIER() {
 	Bin_file* file3 = open_normal_file((char*)nom_fichier_2, 'r');
 	lecture_normal_file(file3);
 	close_normal_file(file3);
+	close_bin_file(file2);
+
 	printf("\nfin test ouverture .txt\n");
 
 }

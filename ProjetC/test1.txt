@@ -1,1 +1,7 @@
-abbcccdddd
+Bonjour, je rencontre un soucis dans la lecture d'un fichier texte qui contient des caractères spéciaux à accent, (é,è,à,...) en ouvrant un fichier test avec ces accents et en affichant la valeur décimale de chaque caractère je tombe sur des valeurs négative et de longueur 2 par caractère. 
+
+Je crois avoir compris le problème, c'est qu'en passant sur un caractère, par exemple : 'è'  la lecture du caractère doit comprendre "`" +"e" d'où la longueur et c'est ce qui doit poser problème.
+
+Auriez vous une idée de comment obtenir 138(valeur ASCII de è) en lisant "è" dans un fichier texte ? 
+
+Je travail sur le codage césar et le but est de chiffrer un fichier texte contenant des accents.

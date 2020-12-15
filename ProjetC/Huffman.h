@@ -6,6 +6,7 @@
 #include "Gestion_fichier.h"
 #define __LIST_H__
 
+#define TAILLE_MAX_CODE 1024
 
 
 //int serialisation(arbre arbreb, char* code, char c, int i);

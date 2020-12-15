@@ -120,6 +120,7 @@ int close_bin_file(Bin_file* fichier)
 	free(fichier);
 	return nb_octets;
 }
+
 char read_bin_file(Bin_file* input)
 {
 	char bit;
@@ -187,7 +188,7 @@ char* lecture_normal_file(Bin_file* input) {
 	{
 		caractereActuel = fgetc(input->file); // On lit le caractère
 		if (caractereActuel != EOF) {
-			printf("%c", caractereActuel); // On l'affiche
+			//printf("%c", caractereActuel); // On l'affiche
 			Item* item = nodeAlloc();
 			arbre arbre = creer_arbre(caractereActuel, NULL, NULL);
 			item->arbre = arbre;

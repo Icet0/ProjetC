@@ -66,12 +66,13 @@ arbre creer_Arbre_char(list_t* list) {
 
 
 
-void table_encodage(arbre arbre)
+char* table_encodage(arbre arbre)
 {
-    char code[255] = {};
-	char resultat[255] = {};
+    char code[TAILLE_MAX_CODE] = {};
+	char resultat[TAILLE_MAX_CODE] = {};
     serialisation(arbre, code,'0',0,NULL, resultat);
     printf("fin table encodage");
+	return resultat;
 }
 
 
@@ -111,7 +112,9 @@ int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, cha
 		arbreb->code[i] = '\0';
 		//fprintf(output->file, "Code de %c :", arbreb->elt);
 		if (est_feuille(arbreb)) {
-			int j = 1;
+			tmp3[0] = '0'; tmp3[1] = '0'; tmp3[2] = '0';
+
+			int j = 3;
 			int cpt = 0;
 			int indice = 0;
 			printf("Code de %c :", arbreb->elt);
@@ -126,17 +129,34 @@ int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, cha
 				tmp3[j] = arbreb->elt;
 				indice = 1;
 			}
-			for (j; j < i; j = j + 1)
+			for (j; j-2 < i; j = j + 1)
 			{
 				//write_bin_file(output, arbreb->code[j]);
-				printf("%c", arbreb->code[j-1]);
-				tmp3[j+indice] = arbreb->code[j-1];
+				printf("%c", arbreb->code[j-3]);
+				tmp3[j+indice] = arbreb->code[j-3];
 				cpt++;
 			}
 			
-			char c_tmp[100];
+			char c_tmp[3];/* c_tmp[0] = '0'; c_tmp[1] = '0'; c_tmp[2] = '0';*/
+			
 			sprintf(c_tmp,"%d",cpt);
-			tmp3[0] = c_tmp[0];
+
+			switch (strlen(c_tmp))
+			{
+			case 1:
+				tmp3[0] = '0'; tmp3[1] = '0'; tmp3[2] = c_tmp[0];
+				break;
+			case 2:
+				tmp3[0] = '0'; tmp3[1] = c_tmp[0]; tmp3[2] = c_tmp[1];
+
+				break;
+			case 3:
+				tmp3[0] = c_tmp[0]; tmp3[1] = c_tmp[1]; tmp3[2] = c_tmp[2];
+				break;
+			default:
+				printf("\n\n\n\n\n\t\t\t\t\tERROR\n\n\n\n\n\n\n\n");
+				break;
+			}
 
 			strcat(tmp, tmp3);
 
@@ -149,33 +169,7 @@ int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, cha
 	return i;
 }
 
-//char* obtention_code(char* liste,char caractere) {//PAS UTILE SI ON A LE BON CODE
-//	char* code = (char*)malloc(sizeof(char) * strlen(liste));
-//
-//	int i = 0;
-//	bool flag = true;
-//	while (i < strlen(liste))
-//	{
-//		char tmp1[10] = {};//buffer pour la taille 
-//		int j = i;
-//		int cpt = 0;
-//		while (((int)liste[j]>=48 && (int)liste[j]<=57) && flag) {//est pas un chiffre et frag vrai
-//			tmp1[cpt] = liste[j];
-//			int taille = atoi((const char*)tmp1);
-//			j++;
-//			cpt++;
-//		}
-//		char* buffer = (char*)malloc(sizeof(char) * (int)liste[i]);
-//
-//		if (liste[i]==caractere) {
-//			
-//			while (liste[i - 1] < liste[i - 2]) {
-//
-//			}
-//		}
-//	}
-//	return NULL;
-//}
+
 
 
 //on passe du caractère au bit
@@ -206,7 +200,7 @@ void codage(arbre arbre, Bin_file* output, char* contenu) {
 			codage_caract(contenu[i], arbre, output);
 		}
 	}
-	printf("\n\nbits codes : %d\n\n", output->nb_octets);
+	printf("\n\nTaille fichier avant compression : %d\n\n", strlen(contenu));
 	// p e rajouter ici le rajout des bits
 }
 
@@ -214,20 +208,21 @@ void codage(arbre arbre, Bin_file* output, char* contenu) {
 //décodage codebinaire to string
 void decodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input) {//output = fichier de destination
 	if (input != NULL /*&& output != NULL*/) {
+		//printf("\nOn se trouve a la position : %ld\n",ftell(input->file));
 		char bit = read_bin_file(input);
 		if (!est_arbre_vide(arbre) && bit != NULL) {
 			if (est_feuille(arbre)) {
 				//ecrire dans le fichier
-				printf("\nOn ecrit dans le fichier : %c\n", arbre->elt);
+				//printf("\nOn ecrit dans le fichier : %c\n", arbre->elt);
 				fputc(arbre->elt, output->file);
 				
 				if (arbre->elt == '\0') {
-					printf("caractere de FIN");
+					//printf("caractere de FIN");
 					return;
 				}
 				arbre = A;//restet de l'arbre
 			}
-			printf("\nRead bin = %c", bit);
+			//printf("\nRead bin = %c", bit);
 			if (bit == '0') {
 				decodage(A,fils_gauche(arbre), output,input);
 			}
@@ -239,34 +234,109 @@ void decodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input) {//output 
 }
 
 
-/*
 
-//recherche si un bit est présent dans le tableau et retourne 1 ou 0
-int rechercher_bits(char* bits, arbre arbre) {
-	int boole = 0;
-	if (!est_arbre_vide(arbre)) {
+
+void ecriture_Dico_Header(char* dico, Bin_file* output) {
+	if (output != NULL && dico != NULL) {
 		int i = 0;
-		char* cod;
-		for (int j = 1; j < strlen(arbre->code); j = j + 1) {
-			cod[i] = arbre->code[j];
-			i = i + 1;
+		int len = strlen(dico);
+		char* tmp = (char*)malloc(sizeof(char) * len);
+		strcpy(tmp,dico);
+		for (i = 0; i < len ; i++)
+		{
+			char c = tmp[i];
+			//printf("\non ecrit %c\n", c);
+			fputc(c, output->file);
 		}
-		cod[i] = '\0';
-		if (cod == bits) {
+		fputc('\0', output->file);
 
-			boole = 1;
-			return boole;
-		}
-
-		rechercher_bits(bits, fils_gauche(arbre));
-		rechercher_bits(bits, fils_droit(arbre));
-		return boole;
+		printf("\n\nOn ecrit le dico : %d caracteres\n\n", i - 1);
 	}
 }
-*/
+
+char* lecture_Dico_Header(Bin_file* input) {
+	char* dico = (char*)malloc(sizeof(char) * TAILLE_MAX_CODE);
+	dico = {};
+	dico = lecture_normal_file(input);
+	//for (int i = 0; i < strlen(dico); i++)
+	//{
+	//	printf("On lit le caractere : %c\n",	dico[i]);
+	//}
+	printf("\ntaille lecture dico %d : \n", strlen(dico));
+	return (dico);
+}
+
+arbre creer_Arbre_By_Dico(char* dico,int taille) {
+	arbre arbre_racine = creer_arbre('\0',NULL,NULL);
+	arbre arbre_tmp = arbre_racine;
+	//On travaille par blocs (taille(sur3bits) + char(sur1bit) + code(surTaillebits)
+
+	int j = 0;//Indice de bloc
+	while (j<taille)
+	{
+		int i = 0; //Indice dans le bloc
+		int taille_code = 0;//Taille en nb de bits du code
+		char caractere;//Caractere actuel
+
+		//CALCUL DE TAILLE DU CODE GRACE AU 3 PREMIERS BITS
+		taille_code = (-48+(int)dico[i + j]) + (-48+(int)dico[i + j + 1]) + (-48+(int)dico[i + j + 2]);
+
+		bool flag = false; // caractere de fin ou non
+		i = 3;//On passe les 3 premiers 'bits' toujours dédié a la taille du code
+		caractere = dico[i + j];//On rajoute j pour avoir tt les blocs
+		if (caractere == 'n' && dico[i + 1 + j] == 'u') {
+			i += 4;
+			flag = true;
+		}
+		else {
+			i++;//(i=4)
+		}
+		
+		arbre arbref;
+		int k = 0;//Indice de notre boucle for pour parcourir notre code
+		for (k; k < taille_code; k++)
+		{
+			arbref = creer_arbre('\0',NULL,NULL);//On creer notre arbre fils
+			char bit = dico[i+j+k];
+			if (bit == '0') {
+				if (arbre_racine->fils_gauche == NULL) {
+					arbre_racine->fils_gauche = arbref;
+				}
+				arbre_racine = arbre_racine->fils_gauche;
+			}
+			else if (bit == '1') {
+				if (arbre_racine->fils_droit == NULL) {
+					arbre_racine->fils_droit = arbref;
+				}
+				arbre_racine = arbre_racine->fils_droit;
+			}
+		}
+
+
+
+		if (flag) {
+			arbre_racine->elt = '\0';
+		}
+		else {
+			arbre_racine->elt = caractere;
+		}
+		i += k;//On rajoute à i le k (longueur code)
+		arbre_racine = arbre_tmp;
+		j += i;//On rajoute à j le i (longueur bloc)
+	}
+	return arbre_tmp;
+}
+
+void completer_bits(Bin_file* file) {
+	for (int i = file->i_octet; i < 8 ; i++)
+	{
+		write_bin_file(file, '0');
+	}
+}
 
 //On appelle les différentes fonctyions de la compression
 void compression(char* nameInput, char* nameOutput) {
+	printf("\n\n\n\n\n\n\n\t\t\t\t\t\t\tCOMPRESSIONS\n\n\n\n\n\n\n");
 	Bin_file* file = open_normal_file(nameInput, 'r');
 
 	/*list_t* list = newList();
@@ -274,18 +344,22 @@ void compression(char* nameInput, char* nameOutput) {
 
 	//On a essayer de tt rassembler sur la ligne suivante
 	arbre ar = creer_Arbre_char(calcul_freq_char(lecture_normal_file(file)));
-	table_encodage(ar);
 	close_normal_file(file);
 	Bin_file* file_bin = open_bin_file(nameOutput, 'w');
-
-	//ecrire_code(ar);     // A FAIRE
+	char* tmp = (char*)malloc(sizeof(char) * TAILLE_MAX_CODE);
+	tmp = table_encodage(ar);
+	int taille_header = strlen(tmp);
+	ecriture_Dico_Header(tmp,file_bin);
 	file = open_normal_file(nameInput, 'r');
-
 	codage(ar, file_bin, lecture_normal_file(file));
+	completer_bits(file_bin);
+	printf("\nFile bin nb octets : %d\n", file_bin->nb_octets+taille_header);
 	//rajouter_bits()      // A FAIRE
 	close_bin_file(file_bin);
 	close_normal_file(file);
-	//free_arbre(ar);      // A decommenter une fois que l'on passe l'arbre dans le header du fichier compressé
+	free_arbre(ar);      // A decommenter une fois que l'on passe l'arbre dans le header du fichier compressé
+
+	
 }
 
 
@@ -294,25 +368,27 @@ void compression(char* nameInput, char* nameOutput) {
 
 
 
-/*
+
 //Idem pour décompression
-void decompression(char* nameInput, Bin_file* output, arbre ar) {
-	Bin_file* inpt;
-	int i;
-	int j;
-	char* s;
-	char* code;
-	char c;
-	inpt = open_bin_file(nameInput, (char)"r");
-	while (read_bin_file(inpt) != EOF) {
-		s = read_bin_file(inpt);
-		if (rechercher_bits((char*)s, ar) == 1) {
-			décodage_caract((char*)s, ar, output);
-		}
-	}
-	close_bin_file(inpt);
+
+void decompression(char* nameInput, char* nameOutput) {
+	printf("\n\n\n\n\n\n\n\t\t\t\t\t\t\tDECOMPRESSIONS\n\n\n\n\n\n\n");
+
+	Bin_file* file_bin = open_bin_file(nameInput, 'r');
+	
+	char* dico = (char*)malloc(sizeof(char) * TAILLE_MAX_CODE);
+	dico = lecture_Dico_Header(file_bin);
+	int taille_dico = strlen(dico);
+	arbre ar_by_dico = creer_Arbre_By_Dico(dico, taille_dico);
+	Bin_file* file = open_normal_file(nameOutput, 'w');
+	fseek(file_bin->file, taille_dico + 1, SEEK_SET);
+
+	decodage(ar_by_dico, ar_by_dico, file, file_bin);
+	close_bin_file(file_bin);
+	close_normal_file(file);
+	free_arbre(ar_by_dico);
 }
-*/
+
 
 ////////////////////////////////////////////////////////TESTS//////////////////////////////////////////////////////////////
 
@@ -369,7 +445,7 @@ void TEST_HUFFMAN() {
 
 	Bin_file* file2 = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
 	Bin_file* file4 = open_normal_file((char*)nom_fichier_3, 'w');
-	decodage(ar,ar, file4, file2);
+	//decodage(ar,ar, file4, file2);
 	close_normal_file(file);
 	close_bin_file(file2);
 
@@ -380,13 +456,31 @@ void TEST_HUFFMAN() {
 
 	compression((char*)nom_fichier_4, (char*)nom_fichier_1);
 	const char* nom_fichier_5 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test3.txt";
-	Bin_file* file_res = open_normal_file((char*)nom_fichier_5, 'w');
-	Bin_file* file_bin = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
+//	Bin_file* file_res = open_normal_file((char*)nom_fichier_5, 'w');
+//	Bin_file* file_bin = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
+//	char* dico = (char*)malloc(sizeof(char) * TAILLE_MAX_CODE);
+//	dico = lecture_Dico_Header(file_bin);
+//	int taille_dico = strlen(dico);
+//	
+//	//test creer_arbre_by_dico
+//	arbre ar_by_dico = creer_Arbre_By_Dico(dico, taille_dico);
+//
+//
+//	fseek(file_bin->file, taille_dico +1, SEEK_SET);
+//	//close_bin_file(file_bin);
+//	//file_bin = open_bin_file((char*)nom_fichier_1, 'w');
+//	//spr_Arbre_Dico(taille,file_bin);
+//	//close_bin_file(file_bin);
+//	//file_bin = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
+//	decodage(ar_by_dico, ar_by_dico, file_res, file_bin);
+//	close_bin_file(file_bin);
+//	close_normal_file(file_res);
 
-	decodage(ar, ar, file_res, file_bin);
 
-	close_bin_file(file_bin);
-	close_normal_file(file_res);
+
+	decompression((char*)nom_fichier_1, (char*)nom_fichier_5);
+
+
 }
 
 

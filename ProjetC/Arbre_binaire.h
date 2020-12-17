@@ -1,4 +1,3 @@
-#pragma once
 #ifndef __ARBRE_BINAIRE__
 #define __ARBRE_BINAIRE__
 

@@ -183,7 +183,7 @@ char* lecture_normal_file(Bin_file* input) {
 	char caractereActuel;
 	caractereActuel = '\0';
 	list_t* liste = newList();
-	printf("ouverture normal file : ");
+	printf("ouverture normal file : \n");
 	while (caractereActuel != EOF)
 	{
 		caractereActuel = fgetc(input->file); // On lit le caractère

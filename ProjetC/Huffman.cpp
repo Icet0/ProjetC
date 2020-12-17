@@ -213,7 +213,7 @@ void decodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input) {//output 
 		if (!est_arbre_vide(arbre) && bit != NULL) {
 			if (est_feuille(arbre)) {
 				//ecrire dans le fichier
-				//printf("\nOn ecrit dans le fichier : %c\n", arbre->elt);
+				//printf("%c", arbre->elt);
 				fputc(arbre->elt, output->file);
 				
 				if (arbre->elt == '\0') {
@@ -279,7 +279,7 @@ arbre creer_Arbre_By_Dico(char* dico,int taille) {
 		char caractere;//Caractere actuel
 
 		//CALCUL DE TAILLE DU CODE GRACE AU 3 PREMIERS BITS
-		taille_code = (-48+(int)dico[i + j]) + (-48+(int)dico[i + j + 1]) + (-48+(int)dico[i + j + 2]);
+		taille_code = ((-48+(int)dico[i + j])*100) + ((-48+(int)dico[i + j + 1])*10) + (-48+(int)dico[i + j + 2]);// A COMPLETER
 
 		bool flag = false; // caractere de fin ou non
 		i = 3;//On passe les 3 premiers 'bits' toujours dédié a la taille du code
@@ -352,13 +352,11 @@ void compression(char* nameInput, char* nameOutput) {
 	ecriture_Dico_Header(tmp,file_bin);
 	file = open_normal_file(nameInput, 'r');
 	codage(ar, file_bin, lecture_normal_file(file));
-	completer_bits(file_bin);
+	completer_bits(file_bin);//Rajoute les derniers bit manquants
 	printf("\nFile bin nb octets : %d\n", file_bin->nb_octets+taille_header);
-	//rajouter_bits()      // A FAIRE
 	close_bin_file(file_bin);
 	close_normal_file(file);
 	free_arbre(ar);      // A decommenter une fois que l'on passe l'arbre dans le header du fichier compressé
-
 	
 }
 
@@ -401,6 +399,7 @@ void decompression(char* nameInput, char* nameOutput) {
 
 
 void TEST_HUFFMAN() {
+	/*
     printf("\n\tTest calcul_frequence : ");
     const char* s = "abbcccdddd";//1a2b3c4d
     list_t* list = newList();
@@ -449,11 +448,12 @@ void TEST_HUFFMAN() {
 	close_normal_file(file);
 	close_bin_file(file2);
 
+	*/
 	getchar();
 	system("cls");
 
 	const char* nom_fichier_4 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
-
+	const char* nom_fichier_1 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.bin";
 	compression((char*)nom_fichier_4, (char*)nom_fichier_1);
 	const char* nom_fichier_5 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test3.txt";
 //	Bin_file* file_res = open_normal_file((char*)nom_fichier_5, 'w');

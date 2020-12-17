@@ -5,7 +5,7 @@
 #include "Gestion_fichier.h"
 #define __LIST_H__
 
-#define TAILLE_MAX_CODE 1024
+#define TAILLE_MAX_CODE 2048
 
 bool rechercher_Char(list_t* list, char c);
 Item* rechercher_Item(list_t* list, char c);

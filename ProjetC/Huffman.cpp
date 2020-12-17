@@ -5,6 +5,9 @@
 
 #include "Huffman.h"
 
+long taille_fichier = 0;
+long taille_fichier_bin = 0;
+long taille_code = 0;
 
 
 
@@ -70,7 +73,7 @@ char* table_encodage(arbre arbre)
 {
     char code[TAILLE_MAX_CODE] = {};
 	char resultat[TAILLE_MAX_CODE] = {};
-    serialisation(arbre, code,'0',0,NULL, resultat);
+    serialisation(arbre, code,'0',0, resultat);
     printf("fin table encodage");
 	return resultat;
 }
@@ -84,8 +87,8 @@ char* table_encodage(arbre arbre)
 //MES MODIFS
 
 
-
-int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, char tmp[]) {
+//Cette fonction permet d'ecrire le code dans les feuilles de l'arbre et stock l'arbre encodé dans tmp[]
+int serialisation(arbre arbreb, char* code, char c, int i, char tmp[]) {
 	
 	if (est_arbre_vide(arbreb)) {
 		/*  */
@@ -162,8 +165,8 @@ int serialisation(arbre arbreb, char* code, char c, int i, Bin_file* output, cha
 
 			printf("\n");
 		}
-		serialisation(fils_gauche(arbreb), tmp1, '0', i, output,tmp);
-		serialisation(fils_droit(arbreb), tmp2, '1', i, output,tmp);
+		serialisation(fils_gauche(arbreb), tmp1, '0', i,tmp);
+		serialisation(fils_droit(arbreb), tmp2, '1', i,tmp);
 
 	}
 	return i;
@@ -200,36 +203,74 @@ void codage(arbre arbre, Bin_file* output, char* contenu) {
 			codage_caract(contenu[i], arbre, output);
 		}
 	}
-	printf("\n\nTaille fichier avant compression : %d\n\n", strlen(contenu));
+	printf("\n\nTaille fichier avant compression : %d\n\n", strlen(contenu)+1);
+	taille_fichier = strlen(contenu);
 	// p e rajouter ici le rajout des bits
 }
 
 
+//NE MARCHE PAS EN RECURSIF
+
 //décodage codebinaire to string
-void decodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input) {//output = fichier de destination
+//void decodage(arbre A, arbre arbre, Bin_file* output,Bin_file* input,int count) {//output = fichier de destination
+//	if (input != NULL /*&& output != NULL*/) {
+//		//printf("\nOn se trouve a la position : %ld\n",ftell(input->file));
+//		char bit = read_bin_file(input);
+//		if (bit != EOF) {
+//			if (!est_arbre_vide(arbre) && bit != NULL) {
+//				if (est_feuille(arbre)) {
+//					//ecrire dans le fichier
+//					//printf("%c", arbre->elt);
+//					fputc(arbre->elt, output->file);	
+//
+//					if (arbre->elt == '\0') {
+//						//printf("caractere de FIN");
+//						return;
+//					}
+//					arbre = A;//restet de l'arbre
+//				}
+//
+//				printf("%d\n", count);
+//				//printf("\nRead bin = %c", bit);
+//				if (bit == '0') {
+//					decodage(A, fils_gauche(arbre), output, input, count + 1);
+//				}
+//				if (bit == '1') {
+//					decodage(A, fils_droit(arbre), output, input, count + 1);
+//				}
+//			}
+//		}
+//		else {
+//			return;
+//		}
+//	}
+//}
+
+void decodage(arbre A, arbre arbre, Bin_file* output, Bin_file* input) {
 	if (input != NULL /*&& output != NULL*/) {
-		//printf("\nOn se trouve a la position : %ld\n",ftell(input->file));
-		char bit = read_bin_file(input);
-		if (!est_arbre_vide(arbre) && bit != NULL) {
+		taille_fichier = 0;
+		char bit = '0';
+		bool flag = false;
+		while ((!est_arbre_vide(arbre) && !flag)) {
+			bit = read_bin_file(input);
+			if (bit == EOF)return;
 			if (est_feuille(arbre)) {
-				//ecrire dans le fichier
 				//printf("%c", arbre->elt);
 				fputc(arbre->elt, output->file);
-				
+				taille_fichier++;
 				if (arbre->elt == '\0') {
-					//printf("caractere de FIN");
-					return;
+					flag = true;
 				}
-				arbre = A;//restet de l'arbre
+				arbre = A;//On repart à la racine
 			}
-			//printf("\nRead bin = %c", bit);
 			if (bit == '0') {
-				decodage(A,fils_gauche(arbre), output,input);
+				arbre = arbre->fils_gauche;
 			}
-			if (bit == '1') {
-				decodage(A,fils_droit(arbre), output, input);
+			else if (bit == '1') {
+				arbre = arbre->fils_droit;
 			}
 		}
+		taille_fichier_bin = input->nb_octets;
 	}
 }
 
@@ -250,7 +291,7 @@ void ecriture_Dico_Header(char* dico, Bin_file* output) {
 		}
 		fputc('\0', output->file);
 
-		printf("\n\nOn ecrit le dico : %d caracteres\n\n", i - 1);
+		printf("\n\nOn ecrit le dico : %d caracteres\n\n", i );
 	}
 }
 
@@ -263,6 +304,7 @@ char* lecture_Dico_Header(Bin_file* input) {
 	//	printf("On lit le caractere : %c\n",	dico[i]);
 	//}
 	printf("\ntaille lecture dico %d : \n", strlen(dico));
+	taille_code = strlen(dico);
 	return (dico);
 }
 
@@ -353,7 +395,8 @@ void compression(char* nameInput, char* nameOutput) {
 	file = open_normal_file(nameInput, 'r');
 	codage(ar, file_bin, lecture_normal_file(file));
 	completer_bits(file_bin);//Rajoute les derniers bit manquants
-	printf("\nFile bin nb octets : %d\n", file_bin->nb_octets+taille_header);
+	printf("\nTaille fichier compresse : %d\n", file_bin->nb_octets+taille_header);
+	printf("\nLe taux de compression est de %f %\n", ((float)(100 * (taille_fichier - (file_bin->nb_octets + taille_header))) / (taille_fichier)));
 	close_bin_file(file_bin);
 	close_normal_file(file);
 	free_arbre(ar);      // A decommenter une fois que l'on passe l'arbre dans le header du fichier compressé
@@ -375,13 +418,15 @@ void decompression(char* nameInput, char* nameOutput) {
 	Bin_file* file_bin = open_bin_file(nameInput, 'r');
 	
 	char* dico = (char*)malloc(sizeof(char) * TAILLE_MAX_CODE);
-	dico = lecture_Dico_Header(file_bin);
+ 	dico = lecture_Dico_Header(file_bin);
 	int taille_dico = strlen(dico);
 	arbre ar_by_dico = creer_Arbre_By_Dico(dico, taille_dico);
 	Bin_file* file = open_normal_file(nameOutput, 'w');
-	fseek(file_bin->file, taille_dico + 1, SEEK_SET);
-
+	fseek(file_bin->file, taille_dico + 1, SEEK_SET);//On change le pointeur de départ pour la lecture du fichier (taille_dico+1)octets (ce qui représente la taille du code)
 	decodage(ar_by_dico, ar_by_dico, file, file_bin);
+	printf("\nTaille fichier compresse : %d\n", taille_fichier_bin+taille_code);
+	printf("\nTaille fichier decompresse : %d\n", taille_fichier);
+	printf("\nLe fichier etait compresse a %f %\n", ((float)(100 * (taille_fichier - (taille_fichier_bin+taille_code))) / (taille_fichier)));
 	close_bin_file(file_bin);
 	close_normal_file(file);
 	free_arbre(ar_by_dico);
@@ -398,87 +443,41 @@ void decompression(char* nameInput, char* nameOutput) {
 
 
 
-void TEST_HUFFMAN() {
-	/*
-    printf("\n\tTest calcul_frequence : ");
-    const char* s = "abbcccdddd";//1a2b3c4d
-    list_t* list = newList();
-
-    //list = calcul_freq_char((char*)s);
-
-	const char* nom_fichier_2 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
-	Bin_file* file3 = open_normal_file((char*)nom_fichier_2, 'r');
-	list = calcul_freq_char(lecture_normal_file(file3));
-
-    printf(" _la liste donnee est %s", s);
-    printList(*list);
-
-    printf("\n\tTest creation_arbre : ");
-    arbre ar = creer_Arbre_char(list);
-    print_arbre(ar);
-
-    table_encodage(ar);
-	printf("\n\tTest codage caract : ");
-	printf("\n\tPour 'a' : ");
-	codage_caract('a', ar, NULL);
-	printf("\n\tPour 'vide' : ");
-	codage_caract('\0', ar, NULL);
+void RUN_HUFFMAN() {
 	
-	printf("\n\tTest decodage code Bits : \n");
-	const char* nom_fichier_1 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.bin";
-	const char* nom_fichier_3 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.txt";
-	Bin_file* file = open_bin_file((char*)nom_fichier_1, 'w');
-	//a
-	write_bin_file(file, '1'); write_bin_file(file, '1'); write_bin_file(file, '0');	write_bin_file(file, '1');
-	//b
-	write_bin_file(file, '1'); write_bin_file(file, '1'); write_bin_file(file, '1');
-	//b
-	write_bin_file(file, '1'); write_bin_file(file, '1'); write_bin_file(file, '1');
-	//d
-	write_bin_file(file, '0');
-	//\0
-	write_bin_file(file, '1');	write_bin_file(file, '1'); write_bin_file(file, '0');	write_bin_file(file, '0');
-	//extra byte
-	write_bin_file(file, '0');
-	close_bin_file(file);
-
-	Bin_file* file2 = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
-	Bin_file* file4 = open_normal_file((char*)nom_fichier_3, 'w');
-	//decodage(ar,ar, file4, file2);
-	close_normal_file(file);
-	close_bin_file(file2);
-
-	*/
+	printf("\n\n\n\n\n\n\n\n\t\tBonjour, appuyez sur ETREE pour commencer\n");
 	getchar();
 	system("cls");
 
-	const char* nom_fichier_4 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
-	const char* nom_fichier_1 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.bin";
-	compression((char*)nom_fichier_4, (char*)nom_fichier_1);
-	const char* nom_fichier_5 = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test3.txt";
-//	Bin_file* file_res = open_normal_file((char*)nom_fichier_5, 'w');
-//	Bin_file* file_bin = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
-//	char* dico = (char*)malloc(sizeof(char) * TAILLE_MAX_CODE);
-//	dico = lecture_Dico_Header(file_bin);
-//	int taille_dico = strlen(dico);
-//	
-//	//test creer_arbre_by_dico
-//	arbre ar_by_dico = creer_Arbre_By_Dico(dico, taille_dico);
-//
-//
-//	fseek(file_bin->file, taille_dico +1, SEEK_SET);
-//	//close_bin_file(file_bin);
-//	//file_bin = open_bin_file((char*)nom_fichier_1, 'w');
-//	//spr_Arbre_Dico(taille,file_bin);
-//	//close_bin_file(file_bin);
-//	//file_bin = open_bin_file((char*)nom_fichier_1, 'r');//ouverture en lecture avant décodage
-//	decodage(ar_by_dico, ar_by_dico, file_res, file_bin);
-//	close_bin_file(file_bin);
-//	close_normal_file(file_res);
-
-
-
-	decompression((char*)nom_fichier_1, (char*)nom_fichier_5);
+	const char* nom_fichier_start = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test1.txt";
+	const char* nom_fichier_bin = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test2.bin";
+	const char* nom_fichier_end = "D:/Travail/Polytech 3A/Projet_C/ProjetC/ProjetC/test3.txt";
+	
+	int entre = 666;
+	while (entre != 0)
+	{
+		printf("\n\n\nVeuillez taper 1 pour la compression de :\n\t%s\nvers :\n\t%s\n\nEt veuillez taper 2 pour la decompression de :\n\t%s\nvers :\n\t%s\n\n\nVeuillez taper 0 pour quitter\n\n",
+			nom_fichier_start, nom_fichier_bin, nom_fichier_bin, nom_fichier_end);
+		scanf("%d", &entre);
+		switch (entre)
+		{
+		case 1:
+			compression((char*)nom_fichier_start, (char*)nom_fichier_bin);
+			break;
+		case 2:
+			decompression((char*)nom_fichier_bin, (char*)nom_fichier_end);
+			break;
+		case 0:
+			break;
+		default:
+			printf("\nMauvais numero");
+			break;
+		}
+		
+		
+	}
+	
+	
 
 
 }

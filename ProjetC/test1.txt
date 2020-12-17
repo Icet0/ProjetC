@@ -1,21 +1,630 @@
-azertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazer
-tyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyui
-opqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsd
-fghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjk
-azertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazer
-tyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyui
-opqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsd
-fghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjkazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazer
-tyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyui
-opqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsd
-fghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjkazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazer
-tyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyui
-opqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsd
-fghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjkazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazer
-tyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyui
-opqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsd
-fghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjkazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazer
-tyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyui
-opqsdfghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsd
-fghjklmwxcvbnazertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjk
- 
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde. 
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde. 
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Et prima post Osdroenam quam, ut dictum est, ab hac descriptione
+discrevimus, Commagena, nunc Euphratensis, clementer adsurgit,
+Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.
+
+Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub
+vultu latens, odorandi vias periculorum occultas perquam sagax.
+is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti
+non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinu
+s infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens
+et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta.
+unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.
+
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus,
+quem eum odisse iam conpererat lege communi,
+scribens ad Caesarem blandius adiumenta paulatim illi subtraxit,
+sollicitari se simulans ne, uti est militare otium fere tumultuosum,
+in eius perniciem conspiraret,
+solisque scholis iussit esse contentum palatinis et 
+protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, 
+ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, 
+quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde. 

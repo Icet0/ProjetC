@@ -1,4 +1,3 @@
-#pragma once
 #ifndef ITEM_H
 #include "Arbre_binaire.h"
 #define ITEM_H
